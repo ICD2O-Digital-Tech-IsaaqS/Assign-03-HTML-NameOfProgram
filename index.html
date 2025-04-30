@@ -1,9 +1,61 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Title</title>
-  </head>
-  <body>
-    <p>Paragraph</p>
-  </body>
+<html lang="en">
+<head>
+    <!-- Meta data and page setup -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Calculate Surface Area and Volume of a Pentagonal Prism, JavaScript">
+    <meta name="keywords" content="Immaculata, ICD2O">
+    <meta name="author" content="Isaaq Simon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io (16)/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io (16)/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io (16)/favicon-16x16.png">
+    <link rel="manifest" href="./favicon_io (16)/site.webmanifest">
+    
+    <!-- Browser tab title -->
+    <title>Pentagonal Prism Calculator</title>
+    
+    <!-- External stylesheet and favicon -->
+    <link rel="stylesheet" href="./css/style.css">
+    
+</head>
+<body>
+    <!-- Main page heading -->
+    <h1>Pentagonal Prism Calculator</h1>
+
+    <!-- Introductory info text -->
+    <p class="info">Enter the side length, apothem, and height to calculate the <strong>Surface Area</strong> and <strong>Volume</strong> of a Pentagonal Prism.</p>
+
+    <p class="info">Formula: <strong>Base Area</strong> = (5 × side × apothem) / 2, <strong>Lateral Area</strong> = 5 × side × height, <strong>Surface Area</strong> = 2 × Base Area + Lateral Area, <strong>Volume</strong> = Base Area × height.</p>
+
+    <!-- Form for user input -->
+    <form id="prismForm" onsubmit="event.preventDefault(); calculate();">
+        <label>Side Length (s): 
+            <!-- User input for side length (2 decimal places, positive values) -->
+            <input type="number" id="side" step="0.01" min="0.01" max="100" required>
+        </label><br>
+
+        <label>Apothem (a): 
+            <!-- User input for apothem -->
+            <input type="number" id="apothem" step="0.01" min="0.01" max="100" required>
+        </label><br>
+
+        <label>Height (h): 
+            <!-- User input for height -->
+            <input type="number" id="height" step="0.01" min="0.01" max="100" required>
+        </label><br><br>
+
+        <!-- Button to trigger JavaScript calculation -->
+        <button type="submit">Calculate</button>
+    </form>
+
+    <!-- Area to display results -->
+    <div id="result"></div>
+
+    <!-- Image of the pentagonal prism -->
+    <img src="./images/Prism.png" alt="Pentagonal Prism" width="300">
+
+    <!-- JavaScript file to perform calculations -->
+    <script src="./js/script.js"></script>
+</body>
 </html>
